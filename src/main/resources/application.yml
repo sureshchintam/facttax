@@ -1,0 +1,25 @@
+#paytm payment merchant sandbox details
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+paytm.payment:
+  sandbox:
+    merchantId: xptYFG27491232739253
+    merchantKey: DSHMUBDbwrB#G!OK
+    channelId: WEB
+    website: WEBSTAGING
+    industryTypeId: Retail
+    #paytmUrl: https://securegw-stage.paytm.in/theia/processTransaction
+    paytmUrl: https://securegw.paytm.in/theia/processTransaction
+#paytmUrl: https://securegw.paytm.in/order/process
+    callbackUrl: http://localhost:8080/pgresponse
+    details:
+      MID: '${paytm.payment.sandbox.merchantid}'
+      CHANNEL_ID: '${paytm.payment.sandbox.channelid}'
+      INDUSTRY_TYPE_ID: '${paytm.payment.sandbox.industrytypeid}'
+      WEBSITE: '${paytm.payment.sandbox.website}'
+      CALLBACK_URL: '${paytm.payment.sandbox.callbackUrl}'
+      
